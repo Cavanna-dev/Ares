@@ -1,0 +1,34 @@
+{% extends "TeamRHIntraBundle::base.html.twig" %}
+
+{% block body %}
+    <div class="container">
+
+        <div class="row" id="pwd-container">
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
+                <section class="login-form">
+                    <form method="POST" action="#" role="login">
+                        {% image '@TeamRHIntraBundle/Resources/public/images/test.png' %}
+                            <img src="{{ asset_url }}" class="img-responsive" alt="" />
+                        {% endimage %}
+                        <input type="email" name="email" placeholder="Email" required class="form-control input-lg" value="johndoe@teamrh.com" />
+
+                        <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
+
+                        <button type="submit" class="btn btn-lg btn-primary btn-block">Connexion</button>
+                    </form>
+
+                    <div class="form-links">
+                        <a href="http://www.teamrh.com">www.teamrh.com</a>
+                    </div>
+                </section>  
+            </div>
+
+            <div class="col-md-4"></div>
+
+
+        </div>
+
+    </div>
+{% endblock %}

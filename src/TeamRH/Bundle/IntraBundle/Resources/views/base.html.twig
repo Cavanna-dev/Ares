@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}TeamRH - Intranet{% endblock %}</title>
+    {% javascripts 
+            '@TeamRHIntraBundle/Resources/public/js/jquery-2.1.3.min.js'
+            '@TeamRHIntraBundle/Resources/public/js/bootstrap.min.js'
+            output='js/compiled/all.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% stylesheets 
+            'bundles/teamrhintra/css/bootstrap.min.css'
+            'bundles/teamrhintra/css/main.css'
+            filter='cssrewrite' output='css/compiled/all.css'
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+    <link rel="shortcut icon" href="http://teamrh.com/images/TeamRH.ico">
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

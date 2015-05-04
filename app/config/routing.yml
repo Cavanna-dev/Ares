@@ -1,0 +1,5 @@
+team_rh_intra:
+    resource: "@TeamRHIntraBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
