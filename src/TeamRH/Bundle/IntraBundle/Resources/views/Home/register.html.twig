@@ -1,0 +1,42 @@
+{% extends "TeamRHIntraBundle::base.html.twig" %}
+
+{% block body %}    
+    <div class="container">
+
+        <div class="row" id="pwd-container">
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
+                <section class="login-form">
+                    {{ form_start(form, {
+                                    'attr':{ 
+                                        'role': 'login'
+                                    } } ) }}
+                    {{ form_errors(form) }}
+
+                    {% image '@TeamRHIntraBundle/Resources/public/images/test.png' %}
+                        <img src="{{ asset_url }}" class="img-responsive" alt="" />
+                    {% endimage %}
+
+                    {{ form_row(form.username) }}
+                    {{ form_row(form.password) }}
+                    {{ form_row(form.email) }}
+                    {{ form_row(form.groups) }}
+
+                    <button type="submit" class="btn btn-lg btn-primary btn-block">Connexion</button>
+                    {{ form_end(form) }}
+
+                    <div class="form-links">
+                        <a href="http://www.teamrh.com">www.teamrh.com</a>
+                    </div>
+                </section>  
+            </div>
+
+            <div class="col-md-4"></div>
+
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
